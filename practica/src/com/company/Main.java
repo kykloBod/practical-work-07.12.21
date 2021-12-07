@@ -121,5 +121,39 @@ public class Main {
                 System.out.println("cos 2x: " + n);
             }
         }
+        if (sk == 3) {//если пользователь ввел 3
+            System.out.println("Введите 1 чтобы вычислить log a по основанию b");
+            System.out.println("Введите 2 чтобы вычислить log b*c по основанию a");
+            System.out.println("Введите 3 чтобы вычислить log b/a по основанию a");
+            byte lg = scanner.nextByte();
+            if (lg == 1) {//если пользователь ввел 1
+                System.out.println("Введите а");
+                System.out.println("Введите b");
+                double a = scanner.nextDouble();//считываем a,b
+                double b = scanner.nextDouble();
+                double n = logab(b, a);//написал маленький метод для log
+                System.out.println(" log a по основанию b: " + n);
+            }
+            if (lg == 2) {//если пользователь ввел 2
+                System.out.println("Введите а");
+                System.out.println("Введите b");
+                System.out.println("Введите c");
+                double a = scanner.nextDouble();//считываем a,b,с
+                double b = scanner.nextDouble();
+                double c = scanner.nextDouble();
+                double n = (logab(b, a)) + (logab(c, a));//вызываем метод
+                System.out.println("log b*c по основанию a: " + n);
+            }
+            if (lg == 3) {//если пользователь ввел 3
+                System.out.println("Введите а");
+                System.out.println("Введите b");
+                System.out.println("Введите c");
+                double a = scanner.nextDouble();//считываем a,b,с
+                double b = scanner.nextDouble();
+                double c = scanner.nextDouble();
+                double n = (logab(b, a)) - (logab(c, a));
+                System.out.println("log b/c по основанию a: " + n);
+            }
+        }
     }
 }
