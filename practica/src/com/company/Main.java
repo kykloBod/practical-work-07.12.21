@@ -68,5 +68,58 @@ public class Main {
                 }
             }
         }
+        if (sk == 2) {//если пользователь ввел 2
+            System.out.println("Введите 1 чтобы вычислить sin x");
+            System.out.println("Введите 2 чтобы вычислить cos x");
+            System.out.println("Введите 3 чтобы вычислить tan x");
+            System.out.println("Введите 4 чтобы вычислить ctg x");
+            System.out.println("Введите 5 чтобы вычислить sin 2x");
+
+            byte tr = scanner.nextByte();//считываем значение сканера триганометрических операцый(tr)
+            //используем тип данных byte для экономии памяти
+            if (tr == 1) {//если пользователь ввел 1
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();//считываем значение х
+                double n = Math.sin(x);//опять же использую переменную n для красоты
+                //для экономии памяти этого делать не следует
+                System.out.println("Значение x: " + n);
+            }
+            if (tr == 2) {//если пользователь ввел 2
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();//считываем значение х
+                //как и до этого использую одни и те же локальные переменные n и х
+                double n = Math.cos(x);
+                System.out.println("Значение x: " + n);
+            }
+            if (tr == 3) {//если пользователь ввел 3
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();//считываем значение х
+                double n = Math.tan(x);
+                System.out.println("Значение x: " + n);
+            }
+            if (tr == 4) {//если пользователь ввел 4
+                System.out.println("Введите x");
+                double x = scanner.nextDouble();//считываем значение х
+                double n = Math.cos(x) / Math.sin(x);
+                //т.к. функции ctg в Math нет используем алгебраический смысл этой функции
+                System.out.println("Значение x: " + n);
+            }
+            if (tr == 5) {//если пользователь ввел 5
+                System.out.println("Введите x, sin x");
+                double x = scanner.nextDouble();//считываем значение х
+                System.out.println("Введите t, cos t");
+                double t = scanner.nextDouble();//считываем значение t
+                double n = 2 * (Math.sin(x)) * (Math.cos(t));
+                System.out.println("sin 2x: " + n);
+            }
+            if (tr == 6) {//если пользователь ввел 6
+                System.out.println("Введите x, sin x");
+                double x = scanner.nextDouble();//считываем значение х
+                System.out.println("Введите t, cos t");
+                double t = scanner.nextDouble();//считываем значение t
+                double n = Math.pow(Math.cos(t), 2) - Math.pow(Math.sin(x), 2);
+                System.out.println("cos 2x: " + n);
+            }
+        }
     }
 }
